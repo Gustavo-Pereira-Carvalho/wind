@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind Estética Automotiva | Osasco - SP</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0a0a0a',
+                            800: '#121212',
+                            700: '#1a1a1a',
+                            600: '#262626',
+                        },
+                        neon: {
+                            green: '#00ff66',
+                            greenDim: '#00cc52',
+                        },
+                        gold: '#d4af37'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f3f4f6;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(0, 255, 102, 0.15);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 35px rgba(0, 255, 102, 0.35);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #00ff66 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 selection:bg-neon-green selection:text-black">
+
+    <!-- 1. Cabeçalho Fixo -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark-900/90 backdrop-blur-md border-b border-dark-600 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-neon-green to-emerald-600 flex items-center justify-center text-black font-black text-xl shadow-lg glow-effect">
+                    W
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-wider uppercase block text-white group-hover:text-neon-green transition-colors">Wind</span>
+                    <span class="text-xs text-gray-400 tracking-widest uppercase block">Estética Automotiva</span>
+                </div>
+            </a>
+
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#sobre" class="hover:text-neon-green transition-colors">Sobre Nós</a>
+                <a href="#servicos" class="hover:text-neon-green transition-colors">Serviços</a>
+                <a href="#galeria" class="hover:text-neon-green transition-colors">Antes & Depois</a>
+                <a href="#avaliacoes" class="hover:text-neon-green transition-colors">Avaliações</a>
+                <a href="#contato" class="hover:text-neon-green transition-colors">Localização</a>
+            </nav>
+
+            <!-- Ações Rápidas -->
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/5511999999999?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-neon-green hover:bg-neon-greenDim text-black font-bold px-5 py-2.5 rounded-xl transition-all shadow-lg glow-effect text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Agendar Horário</span>
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white p-2 focus:outline-none" aria-label="Menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-b border-dark-600 px-6 py-4 space-y-3">
+            <a href="#sobre" class="block text-gray-300 hover:text-neon-green py-2 border-b border-dark-700">Sobre Nós</a>
+            <a href="#servicos" class="block text-gray-300 hover:text-neon-green py-2 border-b border-dark-700">Serviços</a>
+            <a href="#galeria" class="block text-gray-300 hover:text-neon-green py-2 border-b border-dark-700">Antes & Depois</a>
+            <a href="#avaliacoes" class="block text-gray-300 hover:text-neon-green py-2 border-b border-dark-700">Avaliações</a>
+            <a href="#contato" class="block text-gray-300 hover:text-neon-green py-2">Localização</a>
+            <a href="https://wa.me/5511999999999?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="w-full mt-3 flex items-center justify-center gap-2 bg-neon-green text-black font-bold py-3 rounded-xl shadow-lg">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Agendar Horário no WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
+        <!-- Elementos decorativos de fundo -->
+        <div class="absolute inset-0 opacity-20 pointer-events-none">
+            <div class="absolute top-1/4 left-10 w-96 h-96 bg-neon-green/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
+            <div class="inline-flex items-center gap-2 bg-dark-700 border border-dark-600 px-4 py-2 rounded-full mb-6 text-sm text-neon-green">
+                <i class="fa-solid fa-star text-gold"></i>
+                <span>Nota 5.0 no Google com mais de 100 avaliações</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white mb-6 uppercase">
+                Devolvo a sensação de <br>
+                <span class="text-gradient">ter um carro novo</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10">
+                Mais de 9 anos de profissão transformando veículos em Osasco com técnicas avançadas de polimento, vitrificação e detalhamento automotivo de elite.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/5511999999999?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-neon-green hover:bg-neon-greenDim text-black font-extrabold px-8 py-4 rounded-2xl transition-all transform hover:-translate-y-1 shadow-2xl glow-effect text-lg">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>Orçamento Rápido via WhatsApp</span>
+                </a>
+                <a href="#servicos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-dark-700 hover:bg-dark-600 text-white font-semibold px-8 py-4 rounded-2xl transition-all border border-dark-600 text-lg">
+                    <span>Conhecer Serviços</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div>
+
+            <!-- Mini estatísticas -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-16 pt-12 border-t border-dark-700">
+                <div class="bg-dark-800/50 p-4 rounded-2xl border border-dark-700">
+                    <span class="block text-3xl sm:text-4xl font-black text-neon-green mb-1">9+</span>
+                    <span class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Anos de Experiência</span>
+                </div>
+                <div class="bg-dark-800/50 p-4 rounded-2xl border border-dark-700">
+                    <span class="block text-3xl sm:text-4xl font-black text-neon-green mb-1">5.0</span>
+                    <span class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Avaliação no Google</span>
+                </div>
+                <div class="bg-dark-800/50 p-4 rounded-2xl border border-dark-700">
+                    <span class="block text-3xl sm:text-4xl font-black text-neon-green mb-1">3.000+</span>
+                    <span class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Carros Atendidos</span>
+                </div>
+                <div class="bg-dark-800/50 p-4 rounded-2xl border border-dark-700">
+                    <span class="block text-3xl sm:text-4xl font-black text-neon-green mb-1">100%</span>
+                    <span class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Compromisso com o Brilho</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Sobre Nós / Diferenciais -->
+    <section id="sobre" class="py-24 bg-dark-800/40 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Imagem ilustrativa / Vitrine -->
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden border border-dark-600 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Oficina Wind Estética Automotiva" class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-6 left-6 right-6 bg-dark-900/80 backdrop-blur-md p-6 rounded-2xl border border-dark-600">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-neon-green/20 flex items-center justify-center text-neon-green text-xl font-bold">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold text-lg">Padrão Elevado de Qualidade</h4>
+                                    <p class="text-sm text-gray-400">Produtos importados e técnicas de detalhamento de ponta.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Textos e diferenciais -->
+                <div>
+                    <span class="text-neon-green font-semibold uppercase tracking-wider text-sm block mb-3">Sobre a Wind Estética</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white mb-6 uppercase">
+                        Excelência e paixão por carros em <span class="text-gradient">Osasco - SP</span>
+                    </h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Com mais de 9 anos de dedicação no mercado automotivo, a <strong>Wind Estética Automotiva</strong> nasceu da paixão por restaurar, proteger e valorizar a verdadeira essência de cada veículo. Localizados no Jardim das Flores, oferecemos um ambiente seguro e estruturado para cuidar do seu patrimônio.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-start gap-3 bg-dark-800 p-4 rounded-xl border border-dark-700">
+                            <i class="fa-solid fa-circle-check text-neon-green text-xl mt-1"></i>
+                            <div>
+                                <h5 class="font-bold text-white mb-1">Equipe Especializada</h5>
+                                <p class="text-xs text-gray-400">Profissionais altamente treinados em pintura e acabamentos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-dark-800 p-4 rounded-xl border border-dark-700">
+                            <i class="fa-solid fa-circle-check text-neon-green text-xl mt-1"></i>
+                            <div>
+                                <h5 class="font-bold text-white mb-1">Produtos Premium</h5>
+                                <p class="text-xs text-gray-400">Químicas de marcas líderes mundiais em proteção cerâmica.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços." target="_blank" class="inline-flex items-center gap-3 bg-dark-700 hover:bg-dark-600 text-white font-bold px-6 py-3.5 rounded-xl border border-dark-600 transition-all">
+                        <i class="fa-brands fa-whatsapp text-neon-green text-lg"></i>
+                        <span>Falar com Especialista</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Grade de Serviços Interativa -->
+    <section id="servicos" class="py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-neon-green font-semibold uppercase tracking-wider text-sm block mb-3">Nossos Serviços</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white uppercase mb-4">
+                    Soluções Completas para seu <span class="text-gradient">Veículo</span>
+                </h2>
+                <p class="text-gray-400 text-lg">
+                    Escolha o tratamento ideal para devolver o brilho e a proteção que seu carro merece.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Serviço 1: Polimento -->
+                <div class="bg-dark-800 rounded-3xl p-6 border border-dark-700 hover:border-neon-green/50 transition-all duration-300 flex flex-col justify-between group glow-hover">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-neon-green/10 flex items-center justify-center text-neon-green text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Polimento Técnico</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                            Remoção de riscos superficiais, hologramas e oxidação, devolvendo o espelhamento e brilho profundo à pintura.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20orçamento%20para%20Polimento%20Técnico." target="_blank" class="w-full flex items-center justify-center gap-2 bg-dark-700 hover:bg-neon-green hover:text-black text-white font-semibold py-3 rounded-xl transition-all text-sm">
+                        <span>Orçar Serviço</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 2: Lavagem Detalhada -->
+                <div class="bg-dark-800 rounded-3xl p-6 border border-dark-700 hover:border-neon-green/50 transition-all duration-300 flex flex-col justify-between group glow-hover">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-neon-green/10 flex items-center justify-center text-neon-green text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-car-side"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Lavagem Detalhada</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                            Limpeza técnica segura com PH neutro, descontaminação de caixa de rodas, caixas de porta e acabamentos minuciosos.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20orçamento%20para%20Lavagem%20Detalhada." target="_blank" class="w-full flex items-center justify-center gap-2 bg-dark-700 hover:bg-neon-green hover:text-black text-white font-semibold py-3 rounded-xl transition-all text-sm">
+                        <span>Orçar Serviço</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 3: Higienização Interna -->
+                <div class="bg-dark-800 rounded-3xl p-6 border border-dark-700 hover:border-neon-green/50 transition-all duration-300 flex flex-col justify-between group glow-hover">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-neon-green/10 flex items-center justify-center text-neon-green text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-spray-can-sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Higienização Interna</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                            Limpeza profunda de bancos em couro ou tecido, teto, carpetes, remoção de ácaros, bactérias e odores indesejados.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20orçamento%20para%20Higienização%20Interna." target="_blank" class="w-full flex items-center justify-center gap-2 bg-dark-700 hover:bg-neon-green hover:text-black text-white font-semibold py-3 rounded-xl transition-all text-sm">
+                        <span>Orçar Serviço</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 4: Faróis -->
+                <div class="bg-dark-800 rounded-3xl p-6 border border-dark-700 hover:border-neon-green/50 transition-all duration-300 flex flex-col justify-between group glow-hover">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-neon-green/10 flex items-center justify-center text-neon-green text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Restauração de Faróis</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                            Eliminação do amarelado e opacidade das lentes, recuperando a estética original e a eficiência da iluminação noturna.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20orçamento%20para%20Restauração%20de%20Faróis." target="_blank" class="w-full flex items-center justify-center gap-2 bg-dark-700 hover:bg-neon-green hover:text-black text-white font-semibold py-3 rounded-xl transition-all text-sm">
+                        <span>Orçar Serviço</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Galeria "Antes e Depois" -->
+    <section id="galeria" class="py-24 bg-dark-800/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-neon-green font-semibold uppercase tracking-wider text-sm block mb-3">Galeria de Resultados</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white uppercase mb-4">
+                    Veja a <span class="text-gradient">Transformação</span>
+                </h2>
+                <p class="text-gray-400 text-lg">
+                    Confira o antes e depois de carros que passaram pelas mãos de nossos especialistas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Item Galeria 1 -->
+                <div class="bg-dark-800 rounded-3xl overflow-hidden border border-dark-700 shadow-xl group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Polimento Automotivo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-neon-green border border-dark-600">
+                            Polimento de Alta Performance
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-2">Esportivo Impecável</h4>
+                        <p class="text-sm text-gray-400">Correção total de verniz, remoção de riscos e vitrificação cerâmica completa.</p>
+                    </div>
+                </div>
+
+                <!-- Item Galeria 2 -->
+                <div class="bg-dark-800 rounded-3xl overflow-hidden border border-dark-700 shadow-xl group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80" alt="Lavagem e Detalhamento" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-neon-green border border-dark-600">
+                            Lavagem Detalhada
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-2">SUV com Brilho Espelhado</h4>
+                        <p class="text-sm text-gray-400">Limpeza técnica de caixa de rodas, repulsão de água e acabamento impecável.</p>
+                    </div>
+                </div>
+
+                <!-- Item Galeria 3 -->
+                <div class="bg-dark-800 rounded-3xl overflow-hidden border border-dark-700 shadow-xl group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" alt="Estética Automotiva" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-neon-green border border-dark-600">
+                            Higienização e Farol
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-2">Renovação de Farol & Interior</h4>
+                        <p class="text-sm text-gray-400">Restauração da transparência óptica e higienización completa dos bancos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Seção de Avaliações / Prova Social -->
+    <section id="avaliacoes" class="py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-neon-green font-semibold uppercase tracking-wider text-sm block mb-3">Avaliações do Google</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white uppercase mb-4">
+                    O que Nossos <span class="text-gradient">Clientes Dizem</span>
+                </h2>
+                <div class="flex items-center justify-center gap-1 text-gold text-2xl mt-4">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="text-white font-bold text-lg ml-2">5.0 / 5.0 (Mais de 100 avaliações)</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-dark-800 p-8 rounded-3xl border border-dark-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-gold mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6">
+                            "Simplesmente impecável o serviço de polimento e vitrificação! Meu carro saiu parecendo que acabou de sair da concessionária. Atendimento nota 10 em Osasco."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-dark-700">
+                        <div class="w-10 h-10 rounded-full bg-neon-green/20 text-neon-green font-bold flex items-center justify-center">
+                            RC
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-white text-sm">Rodrigo Cardoso</h5>
+                            <span class="text-xs text-gray-400">Cliente Verificado no Google</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="bg-dark-800 p-8 rounded-3xl border border-dark-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-gold mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6">
+                            "Mais de 9 anos de experiência que realmente fazem a diferença. Deixei meu carro para higienização interna e faróis, o resultado superou todas as expectativas!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-dark-700">
+                        <div class="w-10 h-10 rounded-full bg-neon-green/20 text-neon-green font-bold flex items-center justify-center">
+                            MS
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-white text-sm">Marcos Silva</h5>
+                            <span class="text-xs text-gray-400">Cliente Verificado no Google</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="bg-dark-800 p-8 rounded-3xl border border-dark-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-gold mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6">
+                            "Excelente profissional! Pontual, cuidadoso e utiliza produtos de primeiríssima linha. Recomendo de olhos fechados para quem busca qualidade em Osasco."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-dark-700">
+                        <div class="w-10 h-10 rounded-full bg-neon-green/20 text-neon-green font-bold flex items-center justify-center">
+                            AP
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-white text-sm">Ana Paula</h5>
+                            <span class="text-xs text-gray-400">Cliente Verificado no Google</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Rodapé e Contato / Endereço -->
+    <footer id="contato" class="bg-dark-800 border-t border-dark-700 pt-16 pb-24 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <!-- Coluna 1: Sobre -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-neon-green to-emerald-600 flex items-center justify-center text-black font-black text-lg">
+                            W
+                        </div>
+                        <span class="text-lg font-bold uppercase text-white tracking-wider">Wind Estética</span>
+                    </div>
+                    <p class="text-sm mb-6 leading-relaxed">
+                        Devolvendo a sensação de ter um carro novo todos os dias. Referência em estética automotiva em Osasco e região há mais de 9 anos.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="https://instagram.com/windesteticaautomotiva" target="_blank" class="w-10 h-10 rounded-xl bg-dark-700 flex items-center justify-center text-white hover:text-neon-green hover:bg-dark-600 transition-colors">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/5511999999999" target="_blank" class="w-10 h-10 rounded-xl bg-dark-700 flex items-center justify-center text-white hover:text-neon-green hover:bg-dark-600 transition-colors">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Endereço & Horário -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4 uppercase tracking-wider">Localização & Horário</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-neon-green mt-1"></i>
+                            <span>Av. das Flores, 616 - Jardim das Flores, Osasco - SP, 06110-100</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-clock text-neon-green"></i>
+                            <span>Segunda a Sexta: 08:00 às 18:00<br>Sábado: 08:00 às 14:00</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Ação rápida / CTA -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4 uppercase tracking-wider">Agende seu Horário</h4>
+                    <p class="text-sm mb-4">Fale diretamente com nossa equipe e garanta o melhor cuidado para seu veículo.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20serviço." target="_blank" class="inline-flex items-center justify-center gap-2 bg-neon-green text-black font-extrabold w-full py-3.5 rounded-xl shadow-lg hover:bg-neon-greenDim transition-all">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Abrir WhatsApp Agora</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-dark-700 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2026 Wind Estética Automotiva. Todos os direitos reservados. Desenvolvido para alta conversão.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante Fixo do WhatsApp -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações." target="_blank" class="fixed bottom-6 right-6 z-50 bg-neon-green hover:bg-neon-greenDim text-black w-14 h-14 rounded-full flex items-center justify-center shadow-2xl glow-effect transition-all transform hover:scale-110" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl font-black"></i>
+    </a>
+
+    <!-- Script para o menu mobile -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
